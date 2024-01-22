@@ -1,3 +1,4 @@
+import 'package:adpateive_app/views/widget/custom_silver_list.dart';
 import 'package:adpateive_app/views/widget/custom_sliver_grid.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,8 @@ class HomeViewBody extends StatelessWidget {
               height: 16,
             ),
           ),
-          CustomSliverGrid()
+          CustomSliverGrid(),
+          CustomSilverList(),
         ],
       ),
     );
