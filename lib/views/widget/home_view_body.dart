@@ -1,3 +1,4 @@
+import 'package:adpateive_app/views/widget/adaptive_layout.dart';
 import 'package:adpateive_app/views/widget/desktop_layout.dart';
 import 'package:adpateive_app/views/widget/mobile_layout.dart';
 import 'package:adpateive_app/views/widget/tablet_layout.dart';
@@ -8,19 +9,10 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: LayoutBuilder(
-        builder: (context, constains) {
-          if (constains.maxWidth < 600) {
-            return const MobileLayout();
-          } else if (constains.maxWidth < 900) {
-            return const TabletLayout();
-          } else {
-            return const DesktopLayout();
-          }
-        },
-      ),
+    return AdaptiveLayout(
+      mobileLAyout: (context) => const MobileLayout(),
+      tabletLayout: (context) => const TabletLayout(),
+      desktopLayout: (context) => const DesktopLayout(),
     );
   }
 }

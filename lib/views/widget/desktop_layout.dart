@@ -10,9 +10,9 @@ class DesktopLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Row(
       children: [
-        CustomDrawer(),
+        Expanded(child: CustomDrawer()),
         Expanded(
-          flex: 2,
+          flex: 3,
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: TabletLayout(),
