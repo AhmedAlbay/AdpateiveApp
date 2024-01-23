@@ -15,13 +15,17 @@ class CustomDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       backgroundColor: const Color(0xffDBDBDB),
+      elevation: 0,
       child: Column(
         children: [
           const DrawerHeader(
-            child:  Icon(
+            child: Icon(
               FontAwesomeIcons.solidHeart,
-              size: 48,
+              size: 56,
             ),
+          ),
+          const SizedBox(
+            height: 16,
           ),
           CustomDrawerItemListView(items: items)
         ],
@@ -29,4 +33,3 @@ class CustomDrawer extends StatelessWidget {
     );
   }
 }
-
